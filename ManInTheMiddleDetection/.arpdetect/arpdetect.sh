@@ -21,5 +21,6 @@ then
         kdialog --passivepopup  "Warning Detected ARP Poisoning" 3
 	arp -an | awk '{print $4}' | sort | uniq -c | grep -v ' 1 ' >> $logpath/arpwatchlongterm.log
 else
-echo -e "No potential ARP poisoning found" > $logpath/arpwatch.log
+#echo -e "No potential ARP poisoning found" > $logpath/arpwatch.log
+echo "No potential ARP poisoning found" > $logpath/arpwatch.log
 fi
