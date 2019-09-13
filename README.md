@@ -6,7 +6,7 @@
 
 ## INDEX
 
-WiFi Security 
+WiFi Security WPA/WPA2
 |-hashcat
 |-bettercap
 |-hcxtols
