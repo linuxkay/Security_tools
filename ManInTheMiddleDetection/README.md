@@ -9,7 +9,11 @@ Back in 2011, I created MITM detection tools using arp and conky(UI) for Linux. 
 ## INDEX
 
 ## Usage
+run conky in terminal for testing.
 
+Search start to open up Startup Application in GNOME.
+
+add /usr/bin/conky in commands field when prompted
 ## Install
 
 ## Contribution
