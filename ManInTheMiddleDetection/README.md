@@ -14,7 +14,12 @@ run conky in terminal for testing.
 Search start to open up Startup Application in GNOME.
 
 add /usr/bin/conky in commands field when prompted
+
 ## Install
+
+sudo apt -y install conky
+
+Place all files uploaded in this repost to your home folder.
 
 ## Contribution
 
