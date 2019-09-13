@@ -6,7 +6,20 @@ Back in 2011, I created MITM detection tools using arp and conky(UI) for Linux. 
 # Demo in Picture
 ![conkyinaction](https://raw.githubusercontent.com/wiki/linuxkay/Security_tools/images/conky_screenshot.jpeg)
 
-## INDEX
+# Requirements
+
+Linux.
+
+Originally worked in Arch Linux.
+
+Confirmed working in Ubuntu, CentOS, and Fedora  
+
+## Install
+Ubuntu
+
+sudo apt -y install conky
+
+Place all files uploaded in this repost to your home folder.
 
 ## Usage
 run conky in terminal for testing.
@@ -14,12 +27,6 @@ run conky in terminal for testing.
 Search start to open up Startup Application in GNOME.
 
 add /usr/bin/conky in commands field when prompted
-
-## Install
-
-sudo apt -y install conky
-
-Place all files uploaded in this repost to your home folder.
 
 ## Contribution
 
