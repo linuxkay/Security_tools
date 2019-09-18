@@ -83,7 +83,7 @@ ${top name 6} $alignr ${top pid 6} ${top cpu 6}
 ${color Black}Battery $alignr${color Yellow}${battery BAT0}${color}
 #$alignr${execi 30 cat /sys/devices/platform/smapi/BAT0/remaining_running_time_now}min${color}
 ${color grey}${battery_bar}${color}
-${alignc}${font Mono:size=14}${color0}${time %b %Y}${color}
+${alignc}${font HandelGotD:size=14}${color0}${time %Y %m}${color}
 ${font Mono:size=12}${alignc}${goto 5}${color}SU MO TU We Th FR SA
 ${goto 5}${color Blue}${execpi 1800 LAR=`date +%-d`; ncal -bh | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color0}&${color}/' | sed ':a;N;$!ba;s/\n/\n${goto 5}/g'}${color}${font}
 ${execi 600  sh /home/user/.arpdetect/forconky.sh}
