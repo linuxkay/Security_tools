@@ -2,7 +2,7 @@ background yes
 use_xft yes
 xftfont HandelGotD:size=9
 xftalpha 0.5
-update_interval 10.0
+update_interval 3.0
 total_run_times 0
 own_window yes
 own_window_argb_visual yes
@@ -31,14 +31,15 @@ override_utf8_locale yes
 
 TEXT
 
-${color}$sysname $kernel on $machine
+#${color}$sysname $kernel on $machine
 ${color Black}Uptime${color} $alignr${color} $uptime${color}
 ${color Black}Public IP $alignr${color}${execi 300 /home/user/.conky_scripts/ip.sh}
 # Wireless Networking
-${if_up wlp3s0}${color Black}wlp3s0${color} $alignr ${color}${addr wlp3s0}${color}
-${color white}WiFi signal: ${color}${alignr}${wireless_link_qual wlp3s0}%
-${color Yellow}Port${alignr}#Connections
-${color Blue} In: ${tcp_portmon 1 32767 count}${color}  ${color Blue}Out: ${tcp_portmon 32768 61000 count}${color}${alignr} Total: ${tcp_portmon 1 65535 count}
+${if_up wlp3s0}${color Black}WiFi IP${color} $alignr ${color}${addr wlp3s0}${color}
+${color Black}WiFi signal: ${color}${alignr}${wireless_link_qual wlp3s0}%
+#${color White}${hr}${color}
+#${color Yellow}Port${alignr}#Connections
+#${color Blue} In: ${tcp_portmon 1 32767 count}${color}  ${color Blue}Out: ${tcp_portmon 32768 61000 count}${color}${alignr} Total: ${tcp_portmon 1 65535 count}
 ${color Blue}Inbound ${alignr} Local Service/Port$color
 ${tcp_portmon 1 32767 rip 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
 ${tcp_portmon 1 32767 rip 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
@@ -72,18 +73,22 @@ ${color}${fs_bar /}${color}
 #/home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_free_perc /home}%
 #${color}${fs_bar /home}${color}
 #${color}${hr}${color}
-$processes processes 
-${color}NAME $alignr PID    CPU${color}
-${color}${top name 1}${color} $alignr ${top pid 1} ${top cpu 1}
-${top name 2} $alignr ${top pid 2} ${top cpu 2}
+#$processes processes 
+${color Orange}NAME $alignr PID    CPU${color}
+${color Red}${top name 1} $alignr ${top pid 1} ${top cpu 1}${color}
+${color Yellow}${top name 2}${alignr}${top pid 2}${top cpu 2}${color}
 ${top name 3} $alignr ${top pid 3} ${top cpu 3}
 ${top name 4} $alignr ${top pid 4} ${top cpu 4}
 ${top name 5} $alignr ${top pid 5} ${top cpu 5}
 ${top name 6} $alignr ${top pid 6} ${top cpu 6}
-${color Black}Battery $alignr${color Yellow}${battery BAT0}${color}
+${color White}${hr}${color}
+${color}Battery $alignr${color Yellow}${battery BAT0}${color}
 #$alignr${execi 30 cat /sys/devices/platform/smapi/BAT0/remaining_running_time_now}min${color}
 ${color grey}${battery_bar}${color}
-${alignc}${font HandelGotD:size=14}${color0}${time %Y %m}${color}
-${font Mono:size=12}${alignc}${goto 5}${color}SU MO TU We Th FR SA
-${goto 5}${color Blue}${execpi 1800 LAR=`date +%-d`; ncal -bh | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color0}&${color}/' | sed ':a;N;$!ba;s/\n/\n${goto 5}/g'}${color}${font}
+${alignc}${font HandelGotD:size=13}${color Yellow}${time %Y %m}${color}
+${font Mono:size=12}${alignc}${goto 5}${color Black}SU MO TU We Th FR SA${color}
+${goto 5}${color Blue}${execpi 1800 LAR=`date +%-d`; ncal -bh | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color Red}&${color}/' | sed ':a;N;$!ba;s/\n/\n${goto 5}/g'}${color}${font}
+NewYork / America:        ${alignr}${font arial:size=12}${tztime America/New_York %H:%M}${font}
+Seattle / America:        ${alignr}${font arial:size=12}${tztime America/Los_Angeles %H:%M}${font}
+Rome / Italy:        ${alignr}${font arial:size=12}${tztime Europe/Rome %H:%M}${font}
 ${execi 600  sh /home/user/.arpdetect/forconky.sh}
