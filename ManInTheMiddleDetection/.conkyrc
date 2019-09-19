@@ -75,7 +75,7 @@ ${color}${fs_bar /}${color}
 #${color}${hr}${color}
 #$processes processes 
 ${color Orange}NAME $alignr PID    CPU${color}
-${color Red}${top name 1} $alignr ${top pid 1} ${top cpu 1}${color}
+${color Yellow}${top name 1} $alignr ${top pid 1} ${top cpu 1}${color}
 ${color Yellow}${top name 2}${alignr}${top pid 2}${top cpu 2}${color}
 ${top name 3} $alignr ${top pid 3} ${top cpu 3}
 ${top name 4} $alignr ${top pid 4} ${top cpu 4}
@@ -85,9 +85,9 @@ ${color White}${hr}${color}
 ${color}Battery $alignr${color Yellow}${battery BAT0}${color}
 #$alignr${execi 30 cat /sys/devices/platform/smapi/BAT0/remaining_running_time_now}min${color}
 ${color grey}${battery_bar}${color}
-${alignc}${font HandelGotD:size=13}${color Yellow}${time %Y %m}${color}
-${font Mono:size=12}${alignc}${goto 5}${color Black}SU MO TU We Th FR SA${color}
-${goto 5}${color Blue}${execpi 1800 LAR=`date +%-d`; ncal -bh | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color Red}&${color}/' | sed ':a;N;$!ba;s/\n/\n${goto 5}/g'}${color}${font}
+${alignc}${font HandelGotD:size=13}${color White}${time %Y %m}${color}
+${font Mono:size=12}${alignc}${goto 5}${color White}SU MO TU We Th FR SA${color}
+${goto 5}${color Blue}${execpi 1800 LAR=`date +%-d`; ncal -bh | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color Yellow}&${color}/' | sed ':a;N;$!ba;s/\n/\n${goto 5}/g'}${color}${font}
 NewYork / America:        ${alignr}${font arial:size=12}${tztime America/New_York %H:%M}${font}
 Seattle / America:        ${alignr}${font arial:size=12}${tztime America/Los_Angeles %H:%M}${font}
 Rome / Italy:        ${alignr}${font arial:size=12}${tztime Europe/Rome %H:%M}${font}
