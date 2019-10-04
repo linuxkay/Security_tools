@@ -32,11 +32,11 @@ override_utf8_locale yes
 TEXT
 
 #${color}$sysname $kernel on $machine
-${color Black}Uptime${color} $alignr${color} $uptime${color}
+${color black}$loadavg${color} ${color Black}${color} $alignr${color} $uptime${color}
 ${color Black}Public IP $alignr${color}${execi 300 /home/user/.conky_scripts/ip.sh}
+${if_up tun0}${color Black}VPN ${color} $alignr ${color}${addr tun0}${color}
 # Wireless Networking
-${if_up wlp3s0}${color Black}WiFi IP${color} $alignr ${color}${addr wlp3s0}${color}
-${color Black}WiFi signal: ${color}${alignr}${wireless_link_qual wlp3s0}%
+${color Black}Signal: ${color}${alignc}${wireless_link_qual wlp3s0}%${if_up wlp3s0}${color Black} $alignr WiFi${color} $alignr ${color}${addr wlp3s0}${color}
 #${color White}${hr}${color}
 #${color Yellow}Port${alignr}#Connections
 #${color Blue} In: ${tcp_portmon 1 32767 count}${color}  ${color Blue}Out: ${tcp_portmon 32768 61000 count}${color}${alignr} Total: ${tcp_portmon 1 65535 count}
@@ -56,7 +56,7 @@ ${color}${downspeedgraph enp0s25}${color}
 ${color}Outbound${color} $alignr ${color}${upspeed enp0s25} kb/s${color}
 ${color}${upspeedgraph enp0s25}${color}${else}${endif}${endif}
 #${color grey}${hr}${color}
-$alignc${execi 900 cat /proc/cpuinfo | grep "model name" -m1 | cut -d":" -f2 | sed 's/           / /' | sed 's/  / /'}
+#$alignc${execi 900 cat /proc/cpuinfo | grep "model name" -m1 | cut -d":" -f2 | sed 's/           / /' | sed 's/  / /'}
 #${execi 3 cat /proc/cpuinfo | grep "cpu MHz"}
 #$alignc${color}Core0:${color} ${color yellow}${freq_g}GHz / ${color yellow}
 #${coretemp.0 temp 1}c${color}
@@ -64,11 +64,11 @@ ${color orange}Fan Speed${color}${alignr}${color yellow}Fan0:${color pink}${ibm_
 ${color grey}CPU1${color} ${color}${cpubar cpu0}${color}
 ${color white}CPU2${color} ${color}${cpubar cpu1}${color}
 CPU3 ${color}${cpubar cpu2}${color}
-CPU4 ${color}${cpubar cpu3}${color}
+${color white}CPU4 ${color}${cpubar cpu3}${color}
 RAM $alignc ${color yellow}$mem${color} / $memmax $alignr $memperc%Used
 ${color}$membar${color}
 #Swap $alignc${color} $swap / $swapmax $alignr $swapperc%${color}
-SSD $alignc ${color yellow}$fs_used${color}/ ${fs_size /} $alignr ${fs_free_perc /}%Left
+SSD $alignc ${color yellow}$fs_used${color}/ ${fs_size /} $alignr 
 ${color}${fs_bar /}${color}
 #/home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_free_perc /home}%
 #${color}${fs_bar /home}${color}
