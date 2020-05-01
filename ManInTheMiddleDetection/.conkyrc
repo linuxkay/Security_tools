@@ -36,7 +36,7 @@ ${color yellow}$loadavg${color} ${color Black}${color} $alignr${color} $uptime${
 ${color Black}Public IP $alignr${color}${execi 300 /home/user/.conky_scripts/ip.sh}
 ${if_up tun0}${color Black}VPN ${color} $alignr ${color}${addr tun0}${color}
 # Wireless Networking
-${color Black}Signal: ${color}${alignc}${wireless_link_qual wlp3s0}%${if_up wlp3s0}${color Black} $alignr WiFi${color} $alignr ${color}${addr wlp3s0}${color}
+${color white}Signal: ${color}${alignc}${wireless_link_qual wlp3s0}%${if_up wlp3s0}${color white} $alignr ${font FontAwesome:size=9}${font} WiFi${color} $alignr ${color}${addr wlp3s0}${color}
 #${color White}${hr}${color}
 #${color Yellow}Port${alignr}#Connections
 #${color Blue} In: ${tcp_portmon 1 32767 count}${color}  ${color Blue}Out: ${tcp_portmon 32768 61000 count}${color}${alignr} Total: ${tcp_portmon 1 65535 count}
@@ -59,7 +59,7 @@ ${color}${upspeedgraph enp0s25}${color}${else}${endif}${endif}
 #${execi 3 cat /proc/cpuinfo | grep "cpu MHz"}
 #$alignc${color}Core0:${color} ${color yellow}${freq_g}GHz / ${color yellow}
 #${coretemp.0 temp 1}c${color}
-${color white}CPU Temp ${color}${color orange}${hwmon 1 temp 1}°C${alignr}${color}${color white}Fan Speed:${color}${color orange}${ibm_fan}RPM${color}
+${color white}CPU ${font FontAwesome:size=10}${font} ${color}${color orange}${hwmon 1 temp 1}°C${alignr}${color}${color white}Fan Speed:${color}${color orange}${ibm_fan}RPM${color}
 ${color grey}CPU1${color} ${color}${cpubar cpu0}${color}
 ${color white}CPU2${color} ${color}${cpubar cpu1}${color}
 CPU3 ${color}${cpubar cpu2}${color}
@@ -67,7 +67,7 @@ ${color white}CPU4 ${color}${cpubar cpu3}${color}
 RAM $alignc ${color yellow}$mem${color} / $memmax $alignr $memperc%Used
 ${color}$membar${color}
 #Swap $alignc${color} $swap / $swapmax $alignr $swapperc%${color}
-SSD $alignc ${color yellow}$fs_used${color}/ ${fs_size /} $alignr 
+SSD ${font FontAwesome:size=9}${font}$alignc ${color yellow}$fs_used${color}/ ${fs_size /} $alignr 
 ${color}${fs_bar /}${color}
 #/home $alignc ${fs_used /home} / ${fs_size /home} $alignr ${fs_free_perc /home}%
 #${color}${fs_bar /home}${color}
@@ -78,7 +78,7 @@ ${color Yellow}${top name 1} $alignr ${top pid 1} ${top cpu 1}${color}
 ${color Yellow}${top name 2}${alignr}${top pid 2}${top cpu 2}${color}
 ${top name 3} $alignr ${top pid 3} ${top cpu 3}
 ${color White}${hr}${color}
-${color}Battery $alignr${color Yellow}${battery BAT0}${color}
+${color}Battery ${font FontAwesome:size=9}${font} $alignr${color Yellow}${battery BAT0}${color}
 #$alignr${execi 30 cat /sys/devices/platform/smapi/BAT0/remaining_running_time_now}min${color}
 ${color grey}${battery_bar}${color}
 ${alignc}${font HandelGotD:size=13}${color White}${time %Y %m}${color}
