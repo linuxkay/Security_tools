@@ -84,7 +84,7 @@ ${color grey}${battery_bar}${color}
 ${alignc}${font HandelGotD:size=13}${color White}${time %Y %m}${color}
 ${font Mono:size=12}${alignc}${goto 5}${color White}SU MO TU We Th FR SA${color}
 ${goto 5}${color Blue}${execpi 1800 LAR=`date +%-d`; ncal -bh | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color Yellow}&${color}/' | sed ':a;N;$!ba;s/\n/\n${goto 5}/g'}${color}${font}
-NewYork / America:        ${alignr}${font arial:size=12}${tztime America/New_York %H:%M}${font}
-Seattle / America:        ${alignr}${font arial:size=12}${tztime America/Los_Angeles %H:%M}${font}
+NewYork / USA:        ${alignr}${font arial:size=12}${tztime America/New_York %H:%M}${font}
+Seattle / USA:        ${alignr}${font arial:size=12}${tztime America/Los_Angeles %H:%M}${font}
 Rome / Italy:        ${alignr}${font arial:size=12}${tztime Europe/Rome %H:%M}${font}
 ${execi 600  sh /home/user/.arpdetect/forconky.sh}
