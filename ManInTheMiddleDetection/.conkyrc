@@ -36,7 +36,7 @@ ${color yellow}$loadavg${color} ${color Black}${color} $alignr${color} $uptime${
 ${color Black}Public IP $alignr${color}${execi 300 /home/user/.conky_scripts/ip.sh}
 ${if_up tun0}${color Black}VPN ${color} $alignr ${color}${addr tun0}${color}
 # Wireless Networking
-${color white}Signal:${color}${alignc}${wireless_link_qual wlp3s0}%${if_up wlp3s0}${color white} $alignr ${font FontAwesome:size=9}${font}WiFi${color} $alignr ${color}${addr wlp3s0}${color}
+${color white}WiFi ${font FontAwesome:size=9}${font}:${color}${alignc}${wireless_link_qual wlp3s0}%${if_up wlp3s0}${color white} $alignr ${color} $alignr ${color}${addr wlp3s0}${color}
 #${color White}${hr}${color}
 #${color Yellow}Port${alignr}#Connections
 #${color Blue} In: ${tcp_portmon 1 32767 count}${color}  ${color Blue}Out: ${tcp_portmon 32768 61000 count}${color}${alignr} Total: ${tcp_portmon 1 65535 count}
