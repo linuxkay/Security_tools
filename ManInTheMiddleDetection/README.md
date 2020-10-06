@@ -28,6 +28,12 @@ Search start to open up Startup Application in GNOME.
 
 Add /usr/bin/conky in commands field when prompted
 
+## Updates
+
+added battery icon
+
+added power usage Oct7th2020
+
 ## Contribution
 
 ## Licence
