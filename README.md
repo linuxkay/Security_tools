@@ -19,12 +19,14 @@ Subdomain scanning
 |-Turbolist3r
 
 Man In The Middle Attack
-|- arp
+|- arp-poisoning.
 
 XSS 
 |-xsssinper
 ## Requirements
 Linux system.
+
+Conky shows status of MITM in your LAN
 
 ## Usage
 
