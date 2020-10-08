@@ -26,7 +26,9 @@ XSS
 ## Requirements
 Linux system.
 
-Conky shows status of MITM in your LAN
+Conky
+
+font-awesome
 
 ## Usage
 
