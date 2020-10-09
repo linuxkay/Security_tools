@@ -32,7 +32,7 @@ Add /usr/bin/conky in commands field when prompted
 
 added battery icon
 
-added power usage Oct7th2020
+added power usage 2020/10/07
 
 ## Contribution
 
