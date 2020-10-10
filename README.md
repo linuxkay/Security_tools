@@ -14,7 +14,7 @@ WiFi Security WPA/WPA2
 Port Scanning
 |- Massscan
 
-Subdomain scanning
+Subdomain Scanning
 |-Sublist3r
 |-Turbolist3r
 
@@ -23,6 +23,7 @@ Man In The Middle Attack
 
 XSS 
 |-xsssinper
+
 ## Requirements
 Linux system.
 
