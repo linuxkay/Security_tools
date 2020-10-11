@@ -8,31 +8,32 @@ Back in 2011, I created MITM detection tools using arp and conky(UI) for Linux. 
 
 WiFi Security WPA/WPA2
 
-|-hashcat
+ |-hashcat
 
-|-bettercap
+ |-bettercap
 
-|-hcxtols
+ |-hcxtols
 
 Port Scanning
 
-|- Massscan
+ |- Massscan
 
 Subdomain Scanning
 
-|-Sublist3r
+ |-Sublist3r
 
-|-Turbolist3r
+ |-Turbolist3r
 
 Man In The Middle Attack
 
-|- arp-poisoning.
+ |- arp-poisoning.
 
 XSS 
 
-|-xsssinper
+ |-xsssinper
 
 ## Requirements
+
 Linux system.
 
 Conky
