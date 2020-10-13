@@ -44,6 +44,12 @@ fonts-font-awesome
 
 ## Install
 
+in Ubuntu
+
+conky installation.
+
+`sudo apt -y install conky fonts-awesome`
+
 ## Contribution
 
 ## Licence
