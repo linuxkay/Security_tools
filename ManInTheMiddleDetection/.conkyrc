@@ -78,7 +78,7 @@ ${color Yellow}${top name 1} $alignr ${top pid 1} ${top cpu 1}${color}
 ${color Yellow}${top name 2}${alignr}${top pid 2}${top cpu 2}${color}
 ${top name 3} $alignr ${top pid 3} ${top cpu 3}
 ${color White}${hr}${color}
-${color}Battery ${font FontAwesome:size=9}${font}${execi 10 sh /home/user/.conky_scripts/conky_powerusage.sh} $alignr${color Yellow}${battery BAT0}${color}
+${color}Power ${font FontAwesome:size=9}${font}${execi 10 sh /home/user/.conky_scripts/conky_powerusage.sh} $alignr${color Yellow}${battery BAT0}${color}
 #$alignr${execi 30 cat /sys/devices/platform/smapi/BAT0/remaining_running_time_now}min${color}
 ${color grey}${battery_bar}${color}
 ${alignc}${font HandelGotD:size=13}${color White}${time %Y %m}${color}

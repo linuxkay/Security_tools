@@ -30,9 +30,11 @@ Add /usr/bin/conky in commands field when prompted
 
 ## Updates
 
-added battery icon
+dded battery icon
 
-added power usage 2020/10/07
+Added power usage 2020/10/07
+
+Fixed battery percentage going away when power usage showed 5 digits.
 
 ## Contribution
 
