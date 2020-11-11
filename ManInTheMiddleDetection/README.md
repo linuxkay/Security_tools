@@ -34,7 +34,7 @@ dded battery icon
 
 Added power usage 2020/10/07
 
-Fixed battery percentage going away when power usage showed 5 digits.
+Fixed battery percentage going away when power usage showed 5 digits. 2020/11/11
 
 ## Contribution
 
