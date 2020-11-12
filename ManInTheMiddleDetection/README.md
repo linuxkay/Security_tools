@@ -15,6 +15,7 @@ Originally worked in Arch Linux.
 Confirmed working in Ubuntu, CentOS, and Fedora  
 
 ## Install
+
 Ubuntu
 
 sudo apt -y install conky
@@ -22,6 +23,7 @@ sudo apt -y install conky
 Place all files uploaded in this repo to your home folder.
 
 ## Usage
+
 Run conky in terminal for testing.
 
 Search start to open up Startup Application in GNOME.
