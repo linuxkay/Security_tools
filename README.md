@@ -26,7 +26,7 @@ Subdomain Scanning
 
 Man In The Middle Attack
 
- |- arp-poisoning.
+ |- arp-poisoning and LAN poisoning detaction.
 
 XSS 
 
