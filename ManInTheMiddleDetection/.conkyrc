@@ -32,9 +32,9 @@ override_utf8_locale yes
 TEXT
 
 #${color}$sysname $kernel on $machine
-${color yellow}$loadavg${color} ${color Black}${color} $alignr${color} $uptime${color}
-${color Black}Public IP $alignr${color}${execi 300 /home/user/.conky_scripts/ip.sh}
-${if_up tun0}${color Black}VPN ${color} $alignr ${color}${addr tun0}${color}
+${color yellow}$loadavg${color} ${color White}${color} $alignr${color} $uptime${color}
+${color White}Public IP $alignr${color}${execi 300 /home/user/.conky_scripts/ip.sh}
+${if_up tun0}${color White}VPN ${color} $alignr ${color}${addr tun0}${color}
 # Wireless Networking
 ${color white}WiFi ${font FontAwesome:size=9}${font}:${color}${alignc}${wireless_link_qual wlp3s0}%${if_up wlp3s0}${color white} $alignr ${color} $alignr ${color}${addr wlp3s0}${color}
 #${color White}${hr}${color}
