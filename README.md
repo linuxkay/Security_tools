@@ -38,7 +38,7 @@ Linux system.
 
 Conky
 
-fonts-font-awesome
+fonts-awesome
 
 ## Usage
 
