@@ -3,6 +3,7 @@ use_xft yes
 xftfont HandelGotD:size=9
 xftalpha 0.5
 update_interval 3.9
+xinerama_head 0
 total_run_times 0
 own_window yes
 own_window_argb_visual yes
