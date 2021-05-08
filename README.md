@@ -50,7 +50,12 @@ conky installation.
 
 `sudo apt -y install conky fonts-awesome`
 
-## Contribution
+# Feature-upgrades
+
+Add fast.com internetspeed checker at boot.
+
+
+## Contributions
 
 ## Licence
 [MIT]
