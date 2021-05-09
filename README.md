@@ -52,7 +52,7 @@ conky installation.
 
 # Feature-upgrades
 
-Add fast.com internetspeed checker at boot.
+Sugget adding fast.com internetspeed checker at boot.
 
 
 ## Contributions
