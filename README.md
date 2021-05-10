@@ -52,8 +52,9 @@ conky installation.
 
 # Feature-upgrades
 
-Suggest adding fast.com internetspeed checker at boot.
+Add fast.com internetspeed checker at boot.
 
+Edit Internetspeed kb/s on ethernet connection.
 
 ## Contributions
 
