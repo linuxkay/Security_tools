@@ -54,7 +54,7 @@ conky installation.
 
 Add fast.com internetspeed checker at boot.
 
-Edit Internetspeed kb/s on ethernet connection.
+Edit Internetspeed kb/s(Only shows on ethernet connection.)
 
 ## Contributions
 
