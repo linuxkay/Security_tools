@@ -20,7 +20,7 @@ Ubuntu
 
 sudo apt -y install conky
 
-Place all files uploaded in this repo to your home folder.
+Place all files uploaded in this repo to your home directory.
 
 ## Usage
 
