@@ -54,8 +54,6 @@ conky installation.
 
 Add fast.com internetspeed checker at boot.
 
-Edit Internetspeed kb/s(Only shows on ethernet connection.)
-
 Show weather graph.
 
 ## Contributions
