@@ -28,11 +28,11 @@ Run conky in terminal for testing.
 
 Search start to open up Startup Application in GNOME.
 
-Add /usr/bin/conky in commands field when prompted
+Add /usr/bin/conky in commands field when prompted.
 
 ## Updates
 
-dded battery icon
+Added battery icon.
 
 Added power usage 2020/10/07
 
