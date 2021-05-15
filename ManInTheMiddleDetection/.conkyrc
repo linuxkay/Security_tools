@@ -51,9 +51,9 @@ ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 
 #${color}${downspeedgraph wlp3s0 32,150 ffffff ffffff} ${color}${upspeedgraph wlp3sh0 32,150 ffffff ffffff}${else}
 # Wired Networking
 ${if_up enp0s25}${color}enp0s25${color} $alignr ${color}${addr enp0s25}${color}
-${color}Inbound${color} $alignr ${color}${downspeed enp0s25} kb/s${color}
+${color}Inbound${color} $alignr ${color}${downspeed enp0s25} ${color}
 ${color}${downspeedgraph enp0s25}${color}
-${color}Outbound${color} $alignr ${color}${upspeed enp0s25} kb/s${color}
+${color}Outbound${color} $alignr ${color}${upspeed enp0s25} ${color}
 ${color}${upspeedgraph enp0s25}${color}${else}${endif}${endif}
 #${color grey}${hr}${color}
 #$alignc${execi 900 cat /proc/cpuinfo | grep "model name" -m1 | cut -d":" -f2 | sed 's/           / /' | sed 's/  / /'}
