@@ -34,7 +34,7 @@ XSS
 
 ## Requirements
 
-Linux system.
+Linux based system.
 
 Conky
 
