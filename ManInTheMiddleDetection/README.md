@@ -38,7 +38,7 @@ Added power usage 2020/10/07
 
 Fixed battery percentage going away when power usage showed 5 digits. 2020/11/11
 
-Fixed internet speed kb/s duplicate issue.2021/05/16
+Fixed Internet speed prompts kb/s duplicate issue.2021/05/16
 
 ## Contribution
 
