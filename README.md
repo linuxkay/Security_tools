@@ -54,7 +54,7 @@ conky installation.
 
 Add fast.com internetspeed checker at boot.
 
-Show weather graph.
+Add weekly weather graph.
 
 ## Contributions
 
