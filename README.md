@@ -26,7 +26,7 @@ Subdomain Scanning
 
 Man In The Middle Attack
 
- |-arp-poisoning and LAN poisoning detaction.
+ |-Arp-poisoning and LAN poisoning detaction.
 
 XSS 
 
@@ -46,7 +46,7 @@ fonts-font-awesome
 
 in Ubuntu
 
-conky installation.
+Install conky and fonts-awesome by following command.
 
 `sudo apt -y install conky fonts-awesome`
 
