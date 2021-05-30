@@ -30,7 +30,7 @@ Search start to open up Startup Application in GNOME.
 
 Add /usr/bin/conky in commands field when prompted.
 
-## Updates
+## Update logs
 
 Added battery icon.
 
@@ -39,6 +39,8 @@ Added power usage 2020/10/07
 Fixed battery percentage going away when power usage showed 5 digits. 2020/11/11
 
 Fixed Internet speed prompts kb/s duplicate issue. 2021/05/16
+
+Fixed if_up for wlp3s0 and tun0. Added showing date on calendar.
 
 ## Contribution
 
