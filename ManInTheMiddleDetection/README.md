@@ -40,7 +40,7 @@ Fixed battery percentage going away when power usage showed 5 digits. 2020/11/11
 
 Fixed Internet speed prompts kb/s duplicate issue. 2021/05/16
 
-Fixed if_up for wlp3s0 and tun0. Added showing date on calendar.
+Fixed if_up for wlp3s0 and tun0(VPN). Added showing date on calendar.
 
 ## Contribution
 
