@@ -30,6 +30,10 @@ Search start to open up Startup Application in GNOME.
 
 Add /usr/bin/conky in commands field when prompted.
 
+Check official conky configs For more syntax details.
+
+http://conky.sourceforge.net/docs.html
+
 ## Update logs
 
 Added battery icon.
