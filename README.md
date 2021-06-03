@@ -60,6 +60,8 @@ Add fast.com internetspeed checker at boot.
 
 Add weekly weather graph and temp.
 
+Add eyecandy lua graphics.
+
 ## Contributions
 
 ## Licence
