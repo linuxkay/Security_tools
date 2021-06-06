@@ -3,6 +3,7 @@ use_xft yes
 xftfont HandelGotD:size=9
 xftalpha 0.5
 update_interval 3.9
+xinerama_head 1
 total_run_times 0
 own_window yes
 own_window_argb_visual yes
@@ -34,25 +35,25 @@ TEXT
 #${color}$sysname $kernel on $machine
 ${color yellow}$loadavg${color} ${color White}${color} $alignr${color} $uptime${color}
 ${color White}Public IP $alignr${color}${execi 300 /home/user/.conky_scripts/ip.sh}
-${if_up tun0}${color White}VPN ${color} $alignr ${color}${addr tun0}${color}
+${if_up tun0}${color White}VPN ${color} $alignr ${color}${addr tun0}${color}${endif}
 # Wireless Networking
-${color white}WiFi ${font FontAwesome:size=9}${font}:${color}${alignc}${wireless_link_qual wlp3s0}%${if_up wlp3s0}${color white} $alignr ${color} $alignr ${color}${addr wlp3s0}${color}
+${if_up wlp3s0}${color white}WiFi ${font FontAwesome:size=9}${font}:${color}${alignc}${wireless_link_qual wlp3s0}%${if_up wlp3s0}${color white} $alignr ${color} $alignr ${color}${addr wlp3s0}${color}${endif}
 #${color White}${hr}${color}
 #${color Yellow}Port${alignr}#Connections
-#${color Blue} In: ${tcp_portmon 1 32767 count}${color}  ${color Blue}Out: ${tcp_portmon 32768 61000 count}${color}${alignr} Total: ${tcp_portmon 1 65535 count}
-${color Blue}Inbound ${alignr} Local Service/Port$color
+#${color White} In: ${tcp_portmon 1 32767 count}${color}  ${color White}Out: ${tcp_portmon 32768 61000 count}${color}${alignr} Total: ${tcp_portmon 1 65535 count}
+${color White}Inbound ${alignr} Local Service/Port$color
 ${tcp_portmon 1 32767 rip 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
 ${tcp_portmon 1 32767 rip 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
-${color Blue}Outbound ${alignr} Remote Service/Port$color
+${color White}Outbound ${alignr} Remote Service/Port$color
 ${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
 ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
 ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}${else}
 #${color}${downspeedgraph wlp3s0 32,150 ffffff ffffff} ${color}${upspeedgraph wlp3sh0 32,150 ffffff ffffff}${else}
 # Wired Networking
 ${if_up enp0s25}${color}enp0s25${color} $alignr ${color}${addr enp0s25}${color}
-${color}Inbound${color} $alignr ${color}${downspeed enp0s25} kb/s${color}
+${color}Inbound${color} $alignr ${color}${downspeed enp0s25} ${color}
 ${color}${downspeedgraph enp0s25}${color}
-${color}Outbound${color} $alignr ${color}${upspeed enp0s25} kb/s${color}
+${color}Outbound${color} $alignr ${color}${upspeed enp0s25} ${color}
 ${color}${upspeedgraph enp0s25}${color}${else}${endif}${endif}
 #${color grey}${hr}${color}
 #$alignc${execi 900 cat /proc/cpuinfo | grep "model name" -m1 | cut -d":" -f2 | sed 's/           / /' | sed 's/  / /'}
@@ -78,10 +79,10 @@ ${color Yellow}${top name 1} $alignr ${top pid 1} ${top cpu 1}${color}
 ${color Yellow}${top name 2}${alignr}${top pid 2}${top cpu 2}${color}
 ${top name 3} $alignr ${top pid 3} ${top cpu 3}
 ${color White}${hr}${color}
-${color}Power ${font FontAwesome:size=9}${font}${execi 10 sh /home/user/.conky_scripts/conky_powerusage.sh} $alignr${color Yellow}${battery BAT0}${color}
+${color}Power ${font FontAwesome:size=9}${font} ${execi 10 sh /home/user/.conky_scripts/conky_powerusage.sh}$alignr${color Yellow}${battery BAT0}${color}
 #$alignr${execi 30 cat /sys/devices/platform/smapi/BAT0/remaining_running_time_now}min${color}
 ${color grey}${battery_bar}${color}
-${alignc}${font HandelGotD:size=13}${color White}${time %Y %m}${color}
+${alignc}${font HandelGotD:size=13}${color White}${time %Y %m %d}${color}
 ${font Mono:size=12}${alignc}${goto 5}${color White}SU MO TU We Th FR SA${color}
 ${goto 5}${color Blue}${execpi 1800 LAR=`date +%-d`; ncal -bh | sed '2d' | sed -e '1d' -e 's/\<'$LAR'\>/${color Yellow}&${color}/' | sed ':a;N;$!ba;s/\n/\n${goto 5}/g'}${color}${font}
 NewYork / USA:        ${alignr}${font arial:size=12}${tztime America/New_York %H:%M}${font}

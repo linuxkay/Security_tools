@@ -20,7 +20,7 @@ Ubuntu
 
 sudo apt -y install conky
 
-Place all files uploaded in this repo to your home folder.
+Place all files uploaded in this repo to your home directory.
 
 ## Usage
 
@@ -28,15 +28,23 @@ Run conky in terminal for testing.
 
 Search start to open up Startup Application in GNOME.
 
-Add /usr/bin/conky in commands field when prompted
+Add /usr/bin/conky in commands field when prompted.
 
-## Updates
+Check official conky configs For more syntax details.
 
-dded battery icon
+http://conky.sourceforge.net/docs.html
+
+## Update logs
+
+Added battery icon.
 
 Added power usage 2020/10/07
 
 Fixed battery percentage going away when power usage showed 5 digits. 2020/11/11
+
+Fixed Internet speed prompts kb/s duplicate issue. 2021/05/16
+
+Fixed if_up for wlp3s0 and tun0(VPN). Added showing date on calendar.
 
 ## Contribution
 
