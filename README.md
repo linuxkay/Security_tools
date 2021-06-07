@@ -68,6 +68,8 @@ Add eyecandy lua graphics for monitoring.
 
 Disable showing wat usage on charging.
 
+Adjust power line when discharging. Need one space.
+
 ## Contributions
 
 ## Licence
