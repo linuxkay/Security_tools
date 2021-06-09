@@ -68,7 +68,7 @@ Add eyecandy lua graphics for monitoring.
 
 Disable showing wat usage on charging.
 
-Adjust power line when discharging. Need to add one space.
+Adjust power line when discharging. It's not showing %. Need to add one space.
 
 ## Contributions
 
