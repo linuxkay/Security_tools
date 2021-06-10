@@ -42,11 +42,11 @@ XSS
 
 ## Requirements
 
-Linux based system.
+・Linux based system.
 
-Conky
+・Conky
 
-fonts-awesome
+・fonts-awesome
 
 ## Usage
 
