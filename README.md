@@ -66,7 +66,7 @@ Add weekly weather graph and temp.
 
 Add eyecandy lua graphics for monitoring.
 
-Disable showing wat usage on charging.
+Disable showing wat percentage on charging.
 
 ## Contributions
 
