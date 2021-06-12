@@ -42,11 +42,11 @@ XSS
 
 ## Requirements
 
-Linux based system.
+・Linux based system.
 
-Conky
+・Conky
 
-fonts-awesome
+・fonts-awesome
 
 ## Usage
 
@@ -67,6 +67,8 @@ Add weekly weather graph and temp.
 Add eyecandy lua graphics for monitoring.
 
 Disable showing wat percentage on charging.
+
+Adjust power line when discharging. It's not showing %. Need to add one space.
 
 ## Contributions
 
