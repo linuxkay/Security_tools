@@ -41,10 +41,10 @@ ${if_up wlp3s0}${color white}WiFi ${font FontAwesome:size=9}${font}:${color}$
 #${color White}${hr}${color}
 #${color Yellow}Port${alignr}#Connections
 #${color White} In: ${tcp_portmon 1 32767 count}${color}  ${color White}Out: ${tcp_portmon 32768 61000 count}${color}${alignr} Total: ${tcp_portmon 1 65535 count}
-${color White}Inbound ${alignr} Local Service/Port$color
+${color White}Inbound ${alignr} Local Service/Port$color ${downspeed wlp3s0} 
 ${tcp_portmon 1 32767 rip 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
 ${tcp_portmon 1 32767 rip 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
-${color White}Outbound ${alignr} Remote Service/Port$color
+${color White}Outbound ${alignr} Remote Service/Port$color ${upspeed wlp3s0} 
 ${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
 ${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
 ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}${else}
@@ -52,9 +52,12 @@ ${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 
 # Wired Networking
 ${if_up enp0s25}${color}enp0s25${color} $alignr ${color}${addr enp0s25}${color}
 ${color}Inbound${color} $alignr ${color}${downspeed enp0s25} ${color}
-${color}${downspeedgraph enp0s25}${color}
+${tcp_portmon 1 32767 rip 0} ${alignr} ${tcp_portmon 1 32767 lservice 0}
+${tcp_portmon 1 32767 rip 1} ${alignr} ${tcp_portmon 1 32767 lservice 1}
 ${color}Outbound${color} $alignr ${color}${upspeed enp0s25} ${color}
-${color}${upspeedgraph enp0s25}${color}${else}${endif}${endif}
+${tcp_portmon 32768 61000 rhost 0} ${alignr} ${tcp_portmon 32768 61000 rservice 0}
+${tcp_portmon 32768 61000 rhost 1} ${alignr} ${tcp_portmon 32768 61000 rservice 1}
+${tcp_portmon 32768 61000 rhost 2} ${alignr} ${tcp_portmon 32768 61000 rservice 2}${else}
 #${color grey}${hr}${color}
 #$alignc${execi 900 cat /proc/cpuinfo | grep "model name" -m1 | cut -d":" -f2 | sed 's/           / /' | sed 's/  / /'}
 #${execi 3 cat /proc/cpuinfo | grep "cpu MHz"}
